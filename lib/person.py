@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-APROVED_JOBS = [
+APPROVED_JOBS = [
     "Sales",
     "Engineer",
     "Manager",
@@ -24,14 +24,11 @@ class Person:
 
     @name.setter
     def name(self, value):
-    
         if value is None:
             return
-    
         if not isinstance(value, str) or len(value) < 1 or len(value) > 25:
             print("Name must be string between 1 and 25 characters.")
         else:
-        
             self._name = value.title()
 
     @property
@@ -40,7 +37,6 @@ class Person:
 
     @job.setter
     def job(self, value):
-        
         if value is None:
             return
         if value not in APPROVED_JOBS:
